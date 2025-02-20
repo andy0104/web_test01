@@ -9,6 +9,3 @@ CREATE TABLE users
     updated_at timestamp without time zone DEFAULT NOW(),
     PRIMARY KEY (user_id)
 );
-
-ALTER TABLE IF EXISTS users
-    OWNER to root;
