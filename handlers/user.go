@@ -87,6 +87,7 @@ func (uh *UserHandler) Login(c *fiber.Ctx) error {
 }
 
 func (uh *UserHandler) Profile(c *fiber.Ctx) error {
+	// get the userId from the fiber context
 	localData := c.Locals("UserId")
 	userId, _ := strconv.Atoi(localData.(string))
 	user, err := uh.services.User.GetUserInfoById(int64(userId))
